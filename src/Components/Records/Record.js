@@ -11,15 +11,11 @@ export const Record = () => {
   //State for getting the data
   const { workouts, getWorkouts , deleteWorkout, toggleUpdate } = useContext(Data);
 
-  // useEffect(() => {
-  //   if(user){
-  //     getWorkouts();
-  //   }
-  // }, [user, getWorkouts]);
-
-  useEffect(()=>{
-    getWorkouts();
-  },[])
+  useEffect(() => {
+    if(user){
+      getWorkouts();
+    }
+  },[]);
 
   return (
     <div>
